@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+    <link rel="stylesheet" href="/static/chat.css" ></link>
+
+</HEAD>
+<BODY onload="onLoadFunction()">
+<div>
+    <h1>Landing Page</h1>
+    <p>Landing page reached!</p>
+    <h3>List of endpoints supported</h3>
+    <ul>
+        <li><a href="/reply/tessa">GET /reply/tessa</a></li>
+        <li><a href="/repeat">POST /repeat</a></li>
+        <li><a href="/test">Placeholder</a></li>
+    </ul>
+    {% if users %}
+      <p>Users detected: {{users}}!</p>
+      <div id="user-buttons-hook">
+          {% for user in users %}
+            <button id="{{user}}" onclick="selectUserButton('{{user}}')">{{user}}</button>
+          {% endfor %}
+      </div>
+
+    {% else %}
+      <p>No users in the system!</p>
+    {% endif %}
+    <hr/>
+
+    <div id="message-log">
+
+
+    </div>
+
+    <div id="creation-container">
+        <textarea id="message"></textarea>
+        <button onclick="submitMessage()" id="submit-button">Submit</button>
+    </div>
+
+</div>
+
+<script src="/static/chat.js"></script>
+</BODY>
+
+</HTML>

@@ -1,0 +1,123 @@
+.message-bubble{
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    margin-bottom: 1rem;
+    position:relative;
+}
+
+.message-bubble:nth-child(even){
+    border-bottom-right-radius: 0;
+}
+
+.message-bubble:nth-child(odd){
+    border-bottom-left-radius: 0;
+}
+
+.message-bubble:nth-child(even):after{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid black;
+    clear: both;
+}
+
+.message-bubble:nth-child(odd):after{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid black;
+    clear: both;
+}
+
+.message-bubble.red{
+  border-color: #FF5733;
+  background-color: #F2B7AB;
+}
+
+.message-bubble.red:after{
+    border-top-color: #F2B7AB;
+}
+
+.message-bubble.orange{
+  border-color: #FDBA3D;
+  background-color: #F2D9AB;
+}
+
+.message-bubble.orange:after{
+    border-top-color: #F2D9AB;
+}
+
+.message-bubble.yellow{
+  border-color: #DCDE49;
+  background-color: #FEFFAB;
+}
+
+.message-bubble.yellow:after{
+    border-top-color: #FEFFAB;
+}
+
+.message-bubble.blue{
+  border-color: #4080FF;
+  background-color: #ABC7FF;
+}
+
+.message-bubble.blue:after{
+    border-top-color:#ABC7FF
+}
+
+.message-bubble.green{
+  border-color: #27B929;
+  background-color: #A7FCA8;
+}
+
+.message-bubble.green:after{
+    border-top-color: #A7FCA8;
+}
+
+.message-bubble.purple{
+  border-color: #C058FF;
+  background-color: #E5B9FF;
+}
+
+.message-bubble.purple:after{
+    border-top-color: #E5B9FF;
+}
+
+.active-user{
+    border-width:2px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+#message{
+    width: calc( 200px + 2rem );
+    height:3rem;
+}
+
+#submit-button{
+    padding:1rem;
+    background-color: #DA04D6;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: brown;
+    vertical-align: top;
+}
+
+#creation-container{
+}
+
+#creation-container>*{
+    display:inline-block;
+}
